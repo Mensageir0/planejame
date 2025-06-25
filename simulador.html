@@ -51,18 +51,19 @@
         text-align: center;
         margin-bottom: 30px;
       }
-      
+
       .logo img {
         max-width: 200px;
         height: auto;
       }
-      
-      h1, h2 {
+
+      h1,
+      h2 {
         color: var(--primary);
         text-align: center;
         margin-bottom: 20px;
       }
-      
+
       .form-section {
         background-color: white;
         border-radius: 8px;
@@ -70,15 +71,15 @@
         margin-bottom: 30px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       }
-      
+
       .form-control {
         margin-bottom: 15px;
       }
-      
+
       .table-container {
         overflow-x: auto;
       }
-      
+
       table {
         width: 100%;
         border-collapse: collapse;
@@ -88,27 +89,28 @@
         overflow: hidden;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       }
-      
-      th, td {
+
+      th,
+      td {
         padding: 12px 15px;
         text-align: left;
         border-bottom: 1px solid #e0e0e0;
       }
-      
+
       th {
         background-color: var(--primary);
         color: white;
         font-weight: 500;
       }
-      
+
       tr:nth-child(even) {
         background-color: #f9f9f9;
       }
-      
+
       tr:hover {
         background-color: #f1f1f1;
       }
-      
+
       input[type="number"] {
         width: 100%;
         padding: 8px;
@@ -116,13 +118,13 @@
         border-radius: 4px;
         -moz-appearance: textfield;
       }
-      
+
       input[type="number"]::-webkit-outer-spin-button,
       input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
-      
+
       .btn-calculate {
         display: block;
         width: 100%;
@@ -137,11 +139,11 @@
         cursor: pointer;
         transition: background-color 0.3s;
       }
-      
+
       .btn-calculate:hover {
         background-color: #27ae60;
       }
-      
+
       .result-container {
         background-color: white;
         border-radius: 8px;
@@ -151,31 +153,31 @@
         text-align: center;
         display: none;
       }
-      
+
       .result-title {
         color: var(--primary);
         margin-bottom: 20px;
       }
-      
+
       .saldo-final {
         font-size: 1.5em;
         font-weight: bold;
         margin: 20px 0;
       }
-      
+
       .positivo {
         color: #27ae60;
       }
-      
+
       .negativo {
         color: #e74c3c;
       }
-      
+
       .mensagem {
         font-size: 1.1em;
         margin-top: 15px;
       }
-      
+
       footer {
         background-color: var(--azul-escuro);
         color: var(--branco);
@@ -184,13 +186,13 @@
         width: 100%;
         margin-top: auto;
       }
-      
+
       .footer-container {
         max-width: 800px;
         margin: 0 auto;
         padding: 0 20px;
       }
-      
+
       .hero-section {
         background: linear-gradient(135deg, var(--primary), var(--secondary));
         color: white;
@@ -198,23 +200,24 @@
         text-align: center;
         margin-bottom: 30px;
       }
-      
+
       .hero-section h1 {
         color: white;
         margin-bottom: 15px;
       }
-      
+
       @media (max-width: 768px) {
         .main-content {
           padding: 20px 15px;
           padding-top: 70px;
         }
-        
+
         table {
           font-size: 0.9em;
         }
-        
-        th, td {
+
+        th,
+        td {
           padding: 8px 10px;
         }
       }
@@ -227,7 +230,7 @@
         style="background-color: var(--azul-escuro)"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <a class="navbar-brand" href="index.html">Planeja.me</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -284,19 +287,23 @@
 
     <main class="main-content">
       <div class="logo">
-        <img src="./img/logotodo.jpeg" alt="Planeja.me Logo" class="img-fluid" />
+        <img
+          src="./img/logotodo.jpeg"
+          alt="Planeja.me Logo"
+          class="img-fluid"
+        />
       </div>
 
       <div class="form-section">
         <h2>1. Informe sua Renda Mensal</h2>
         <div class="d-flex justify-content-center">
-          <div style="width: 200px;">
-            <input 
-              type="number" 
-              id="renda" 
-              class="form-control text-center" 
-              placeholder="R$" 
-              step="0.01" 
+          <div style="width: 200px">
+            <input
+              type="number"
+              id="renda"
+              class="form-control text-center"
+              placeholder="R$"
+              step="0.01"
             />
           </div>
         </div>
@@ -315,39 +322,102 @@
             <tbody>
               <tr>
                 <td>Aluguel</td>
-                <td><input type="number" id="aluguel" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="aluguel"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Condomínio</td>
-                <td><input type="number" id="condominio" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="condominio"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Prestação do carro</td>
-                <td><input type="number" id="carro" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="carro"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Escola/Faculdade</td>
-                <td><input type="number" id="educacao" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="educacao"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Plano de saúde</td>
-                <td><input type="number" id="saude" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="saude"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Internet e telefone</td>
-                <td><input type="number" id="telecom" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="telecom"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Academia</td>
-                <td><input type="number" id="academia" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="academia"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Seguro</td>
-                <td><input type="number" id="seguro" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="seguro"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Outros</td>
-                <td><input type="number" id="outros-fixos" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="outros-fixos"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
             </tbody>
           </table>
@@ -367,46 +437,111 @@
             <tbody>
               <tr>
                 <td>Supermercado</td>
-                <td><input type="number" id="supermercado" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="supermercado"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Lazer (cinema, restaurantes, etc.)</td>
-                <td><input type="number" id="lazer" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="lazer"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Roupas</td>
-                <td><input type="number" id="roupas" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="roupas"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Farmácia</td>
-                <td><input type="number" id="farmacia" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="farmacia"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Combustível</td>
-                <td><input type="number" id="combustivel" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="combustivel"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Delivery</td>
-                <td><input type="number" id="delivery" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="delivery"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Presentes</td>
-                <td><input type="number" id="presentes" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="presentes"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Manutenção da casa ou carro</td>
-                <td><input type="number" id="manutencao" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="manutencao"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>Outros</td>
-                <td><input type="number" id="outros-variaveis" step="0.01" class="form-control" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="outros-variaveis"
+                    step="0.01"
+                    class="form-control"
+                  />
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <button onclick="calcular()" class="btn-calculate">Calcular Meu Orçamento</button>
+      <button onclick="calcular()" class="btn-calculate">
+        Calcular Meu Orçamento
+      </button>
 
       <div id="resultado" class="result-container">
         <h2 class="result-title">Resultado Final</h2>
@@ -466,7 +601,8 @@
         const mensagemElement = document.getElementById("mensagem");
 
         saldoFinalElement.textContent = `Saldo Final: R$ ${saldo.toFixed(2)}`;
-        saldoFinalElement.className = saldo >= 0 ? "saldo-final positivo" : "saldo-final negativo";
+        saldoFinalElement.className =
+          saldo >= 0 ? "saldo-final positivo" : "saldo-final negativo";
 
         if (saldo > 0) {
           mensagemElement.textContent =

@@ -4,20 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Depoimentos | Planeja.me - Controle Financeiro Pessoal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
     <style>
       :root {
-           --primary: #1a3a6a;
+        --primary: #1a3a6a;
         --secondary: #2ecc71;
         --azul-escuro: #1a3a6a;
         --verde-principal: #2ecc71;
         --branco: #ffffff;
         --preto: #333333;
       }
-      
+
       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -26,7 +32,7 @@
         color: var(--preto);
         background-color: #f5f5f5;
       }
-      
+
       .main-content {
         flex: 1;
         padding-top: 80px;
@@ -37,7 +43,7 @@
         margin: 0 auto;
         padding: 20px;
       }
-  .hero-section {
+      .hero-section {
         background: linear-gradient(135deg, var(--primary), var(--secondary));
         color: white;
         padding: 80px 0;
@@ -122,7 +128,7 @@
         text-align: center;
         display: none;
       }
-          
+
       footer {
         background-color: var(--azul-escuro);
         color: var(--branco);
@@ -142,11 +148,11 @@
         .hero-section {
           padding: 4rem 0;
         }
-        
+
         .hero-section h1 {
           font-size: 2rem;
         }
-        
+
         .container {
           padding: 15px;
         }
@@ -160,10 +166,18 @@
   </head>
   <body>
     <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: var(--azul-escuro);">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: var(--azul-escuro)"
+      >
         <div class="container-fluid">
-          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <a class="navbar-brand" href="index.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -187,10 +201,17 @@
                 <a class="nav-link" href="aulas.html">Aulas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="FATO OU FAKE ATT.html">Fato ou Fake</a>
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="depoimento.html">Depoimentos</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="depoimento.html"
+                  >Depoimentos</a
+                >
               </li>
             </ul>
             <div>
@@ -201,8 +222,8 @@
                   background-color: var(--secondary);
                   border-color: var(--secondary);
                 "
-                >Cadastre-se</a>
-              
+                >Cadastre-se</a
+              >
             </div>
           </div>
         </div>
@@ -212,7 +233,9 @@
     <div class="hero-section">
       <div class="container">
         <h1>Depoimentos</h1>
-        <p class="lead">Veja o que nossos usuários estão dizendo sobre o Planeja.me</p>
+        <p class="lead">
+          Veja o que nossos usuários estão dizendo sobre o Planeja.me
+        </p>
       </div>
     </div>
 
@@ -221,24 +244,26 @@
         <div class="depoimento">
           <div class="autor">Carlos Silva</div>
           <div class="mensagem">
-            Adorei a facilidade de uso do site! Me ajudou muito a organizar minhas
-            finanças e planejar melhor meus gastos mensais. A seção de simulador é incrível!
+            Adorei a facilidade de uso do site! Me ajudou muito a organizar
+            minhas finanças e planejar melhor meus gastos mensais. A seção de
+            simulador é incrível!
           </div>
         </div>
 
         <div class="depoimento">
           <div class="autor">Ana Oliveira</div>
           <div class="mensagem">
-            As ferramentas são incríveis e muito intuitivas. Recomendo para todos que querem
-            começar a cuidar melhor do seu dinheiro sem complicação.
+            As ferramentas são incríveis e muito intuitivas. Recomendo para
+            todos que querem começar a cuidar melhor do seu dinheiro sem
+            complicação.
           </div>
         </div>
 
         <div class="depoimento">
           <div class="autor">Roberto Santos</div>
           <div class="mensagem">
-            Nunca tinha visto um site tão completo. Parabéns pela iniciativa! Consegui
-            sair das dívidas usando as dicas da seção Regularize.
+            Nunca tinha visto um site tão completo. Parabéns pela iniciativa!
+            Consegui sair das dívidas usando as dicas da seção Regularize.
           </div>
         </div>
 
@@ -247,11 +272,11 @@
         <form id="depoimentoForm" class="form-depoimento">
           <h2>Deixe seu depoimento</h2>
 
-          <input 
-            type="text" 
-            id="nome" 
-            class="form-control" 
-            placeholder="Seu nome (opcional)" 
+          <input
+            type="text"
+            id="nome"
+            class="form-control"
+            placeholder="Seu nome (opcional)"
           />
 
           <textarea
@@ -265,7 +290,8 @@
           <button type="submit" class="btn-enviar">Enviar Depoimento</button>
 
           <div id="successMessage" class="success-message">
-            Depoimento enviado com sucesso! Obrigado por compartilhar sua experiência.
+            Depoimento enviado com sucesso! Obrigado por compartilhar sua
+            experiência.
           </div>
         </form>
       </div>
@@ -283,29 +309,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-      
         document
           .getElementById("depoimentoForm")
           .addEventListener("submit", function (e) {
             e.preventDefault();
 
-          
             const nome = document.getElementById("nome").value;
             const mensagem = document.getElementById("mensagem").value;
 
-          
             if (mensagem.trim() === "") {
               alert("Por favor, escreva seu depoimento!");
               return;
             }
 
-      
             exibirNovoDepoimento(nome, mensagem);
 
-      
             mostrarMensagemSucesso();
 
-         
             this.reset();
           });
       });
@@ -333,16 +353,13 @@
         divMensagem.textContent = mensagem;
         divDepoimento.appendChild(divMensagem);
 
-    
         container.insertBefore(divDepoimento, container.firstChild);
       }
 
-      
       function mostrarMensagemSucesso() {
         const mensagem = document.getElementById("successMessage");
         mensagem.style.display = "block";
 
-        
         setTimeout(function () {
           mensagem.style.display = "none";
         }, 3000);
