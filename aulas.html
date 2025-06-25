@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aprenda educação financeira com as videoaulas do Planeja.me - sua plataforma de controle financeiro pessoal"
+    />
+    <meta name="author" content="Equipe Planeja.me" />
+    <meta name="generator" content="Bootstrap v5.3" />
+    <title>Video Aulas | Planeja.me - Educação Financeira</title>
+    <link rel="canonical" href="https://planeja.me/videoaulas" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --azul-escuro: #1a3a6a;
+        --verde-principal: #2ecc71;
+        --branco: #ffffff;
+        --preto: #333333;
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --success: #4caf50;
+        --warning: #ff9800;
+        --danger: #f44336;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --branco: #ffffff;
+        --preto: #1a3a6a;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: var(--preto);
+        background-color: #f5f5f5;
+      }
+
+      .main-content {
+        flex: 1;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 5rem 0;
+        margin-bottom: 3rem;
+      }
+
+      .btn-primary {
+        background-color: var(--verde-principal);
+        border-color: var(--verde-principal);
+      }
+
+      .btn-primary:hover {
+        background-color: #27ae60;
+        border-color: #27ae60;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .video-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-thumbnail {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-thumbnail iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .video-info {
+        padding: 1.5rem;
+      }
+
+      .video-info h3 {
+        margin-bottom: 0.5rem;
+        color: var(--azul-escuro);
+      }
+
+      .video-info p {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+      }
+
+      .featurette-divider {
+        margin: 3rem 0;
+      }
+
+      footer {
+        background: var(--preto);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 3rem 0;
+        }
+
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: var(--azul-escuro)"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulador.html">Simulador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invest.html">Investimentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Aulas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="container text-center">
+          <h1 class="display-4 fw-bold">Video aulas de Educação Financeira</h1>
+          <p class="lead">
+            Aprenda a investir, economizar e planejar seu futuro financeiro com
+            nossos especialistas
+          </p>
+        </div>
+      </section>
+
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Nossas Videoaulas</h2>
+
+        <div class="video-grid">
+         
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/qBgK1tRAPzA?si=aShKfXVANsXzopwo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Como começar a investir com pouco dinheiro</h3>
+              <p>09 min | Básico</p>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/oLMxWL2w5PY?si=QzhzjkQC0GDJoIVx"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Criando um orçamento familiar eficiente</h3>
+              <p>14 min | Básico</p>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/CVIBjmUSxHU?si=c7YHWm_kofAPDjax"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Entendendo fundos de investimento</h3>
+              <p>15 min | Intermediário</p>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/I57R2Lr3mRE?si=F2Xxrp-ulrF-26og"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Planejando sua aposentadoria</h3>
+              <p>11 min | Avançado</p>
+            </div>
+          </div>
+
+          <!-- Video 5 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/HSXcvFVtsdM?si=L2-pwdaJM1ytZJPD"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>A regra dos 3 fatores</h3>
+              <p>14 min | Básico</p>
+            </div>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe
+                src="https://www.youtube.com/embed/8zj0GJKTWwE?si=rsJLWEVodbx43ABv"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Como sair das dívidas de forma inteligente</h3>
+              <p>13 min | Básico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

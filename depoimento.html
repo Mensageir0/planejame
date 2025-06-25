@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depoimentos | Planeja.me - Controle Financeiro Pessoal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+      :root {
+           --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --azul-escuro: #1a3a6a;
+        --verde-principal: #2ecc71;
+        --branco: #ffffff;
+        --preto: #333333;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: var(--preto);
+        background-color: #f5f5f5;
+      }
+      
+      .main-content {
+        flex: 1;
+        padding-top: 80px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .hero-section h1 {
+        font-size: 4.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .depoimento {
+        background-color: white;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .autor {
+        font-weight: bold;
+        color: var(--azul-escuro);
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      .mensagem {
+        margin-top: 10px;
+        color: var(--preto);
+        line-height: 1.6;
+      }
+
+      .form-depoimento {
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        margin-top: 40px;
+      }
+
+      .form-depoimento h2 {
+        color: var(--azul-escuro);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .form-control {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 12px;
+      }
+
+      .form-control:focus {
+        border-color: var(--verde-principal);
+        box-shadow: 0 0 0 0.25rem rgba(46, 204, 113, 0.25);
+      }
+
+      .btn-enviar {
+        background-color: var(--verde-principal);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+        transition: background-color 0.3s;
+      }
+
+      .btn-enviar:hover {
+        background-color: #27ae60;
+      }
+
+      .success-message {
+        background-color: var(--verde-principal);
+        color: white;
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 20px;
+        text-align: center;
+        display: none;
+      }
+          
+      footer {
+        background-color: var(--azul-escuro);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .footer-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 4rem 0;
+        }
+        
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+        
+        .container {
+          padding: 15px;
+        }
+      }
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: var(--azul-escuro);">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulador.html">Simulador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invest.html">Investimentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aulas.html">Aulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html">Fato ou Fake</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="depoimento.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a
+                href="cadastro.html"
+                class="btn btn-primary"
+                style="
+                  background-color: var(--secondary);
+                  border-color: var(--secondary);
+                "
+                >Cadastre-se</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-section">
+      <div class="container">
+        <h1>Depoimentos</h1>
+        <p class="lead">Veja o que nossos usuários estão dizendo sobre o Planeja.me</p>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="depoimento">
+          <div class="autor">Carlos Silva</div>
+          <div class="mensagem">
+            Adorei a facilidade de uso do site! Me ajudou muito a organizar minhas
+            finanças e planejar melhor meus gastos mensais. A seção de simulador é incrível!
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="autor">Ana Oliveira</div>
+          <div class="mensagem">
+            As ferramentas são incríveis e muito intuitivas. Recomendo para todos que querem
+            começar a cuidar melhor do seu dinheiro sem complicação.
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="autor">Roberto Santos</div>
+          <div class="mensagem">
+            Nunca tinha visto um site tão completo. Parabéns pela iniciativa! Consegui
+            sair das dívidas usando as dicas da seção Regularize.
+          </div>
+        </div>
+
+        <div id="novosDepoimentos"></div>
+
+        <form id="depoimentoForm" class="form-depoimento">
+          <h2>Deixe seu depoimento</h2>
+
+          <input 
+            type="text" 
+            id="nome" 
+            class="form-control" 
+            placeholder="Seu nome (opcional)" 
+          />
+
+          <textarea
+            id="mensagem"
+            class="form-control"
+            placeholder="Escreva seu depoimento aqui..."
+            required
+            rows="5"
+          ></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar Depoimento</button>
+
+          <div id="successMessage" class="success-message">
+            Depoimento enviado com sucesso! Obrigado por compartilhar sua experiência.
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      
+        document
+          .getElementById("depoimentoForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+          
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+          
+            if (mensagem.trim() === "") {
+              alert("Por favor, escreva seu depoimento!");
+              return;
+            }
+
+      
+            exibirNovoDepoimento(nome, mensagem);
+
+      
+            mostrarMensagemSucesso();
+
+         
+            this.reset();
+          });
+      });
+
+      function exibirNovoDepoimento(nome, mensagem) {
+        const container = document.getElementById("novosDepoimentos");
+
+        const divDepoimento = document.createElement("div");
+        divDepoimento.className = "depoimento";
+
+        if (nome.trim() !== "") {
+          const divAutor = document.createElement("div");
+          divAutor.className = "autor";
+          divAutor.textContent = nome;
+          divDepoimento.appendChild(divAutor);
+        } else {
+          const divAutor = document.createElement("div");
+          divAutor.className = "autor";
+          divAutor.textContent = "Anônimo";
+          divDepoimento.appendChild(divAutor);
+        }
+
+        const divMensagem = document.createElement("div");
+        divMensagem.className = "mensagem";
+        divMensagem.textContent = mensagem;
+        divDepoimento.appendChild(divMensagem);
+
+    
+        container.insertBefore(divDepoimento, container.firstChild);
+      }
+
+      
+      function mostrarMensagemSucesso() {
+        const mensagem = document.getElementById("successMessage");
+        mensagem.style.display = "block";
+
+        
+        setTimeout(function () {
+          mensagem.style.display = "none";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

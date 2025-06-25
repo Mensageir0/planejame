@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regularize - Planeja.me</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --accent: #f72585;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --success: #4cc9f0;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--dark);
+        background-color: var(--light);
+        padding-top: 56px;
+      }
+
+      .navbar {
+        background-color: var(--primary) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: var(--secondary) !important;
+      }
+
+      .active {
+        font-weight: bold;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 60px 0 30px 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        color: var(--secondary);
+      }
+
+      h3 {
+        color: var(--primary);
+      }
+
+      .step-card {
+        background-color: #f8f9fa;
+        border-left: 4px solid var(--primary);
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .step-number {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 0.5rem;
+        font-weight: bold;
+      }
+
+      .tip-box {
+        background-color: #e9f7fe;
+        border: 1px solid var(--success);
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .tip-title {
+        color: var(--success);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .tip-title:before {
+        content: "💡";
+        margin-right: 0.5rem;
+      }
+
+      .btn {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        margin: 1rem 0;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(67, 97, 238, 0.3);
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(67, 97, 238, 0.4);
+      }
+
+      footer {
+        background: var(--primary);
+        color: var(--white);
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.5rem;
+          margin: 1rem;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .navbar-nav {
+          padding-bottom: 10px;
+        }
+      }
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="simulador.html">Simulador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="invest.html">Investimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="credito.html">Crédito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="regularize.html">Regularize</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aulas.html">Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fato-ou-fake.html">Fato ou Fake</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="depoimento.html">Depoimentos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <h1>Regularize seu nome</h1>
+      <p>
+        Regularizar suas pendências financeiras é essencial para recuperar seu
+        crédito e planejar um futuro financeiro saudável.
+      </p>
+      <p>Siga nosso guia completo para limpar seu nome de forma eficiente.</p>
+    </div>
+
+    <div class="container">
+      <h2>Passo a passo para regularização</h2>
+      <div class="step-card">
+        <h3><span class="step-number">1</span> Verifique suas pendências</h3>
+        <p>
+          Acesse o
+          <a href="https://www.serasa.com.br" target="_blank">Serasa</a> para
+          consultar seu CPF gratuitamente e identificar todas as dívidas
+          registradas. Você também pode verificar no:
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.registrato.bcb.gov.br" target="_blank"
+              >Registrato (Banco Central)</a
+            >
+          </li>
+          <li>
+            <a href="https://www.consumidor.gov.br" target="_blank"
+              >Consumidor.gov.br</a
+            >
+          </li>
+          <li>SPC, Boa Vista</li>
+        </ul>
+        <a href="https://www.serasa.com.br" target="_blank" class="btn"
+          >Consultar no Serasa</a
+        >
+      </div>
+
+      <div class="step-card">
+        <h3><span class="step-number">2</span> Organize suas dívidas</h3>
+        <p>Liste todas as dívidas encontradas com:</p>
+        <ul>
+          <li>Nome do credor</li>
+          <li>Valor original e atualizado</li>
+          <li>Data da dívida</li>
+          <li>Status (judicial ou extrajudicial)</li>
+        </ul>
+        <p>
+          Priorize as dívidas com maior impacto no score ou vencimento próximo.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <h3><span class="step-number">3</span> Negocie diretamente</h3>
+        <p>Entre em contato com os credores por:</p>
+        <ul>
+          <li>Sites oficiais</li>
+          <li>Canais online</li>
+          <li>Presencialmente (se aplicável)</li>
+        </ul>
+        <div class="tip-box">
+          <div class="tip-title">Dica de Negociação</div>
+          <p>No início do mês, há mais chances de conseguir bons descontos:</p>
+          <ul>
+            <li>Descontos à vista (até 90%)</li>
+            <li>Parcelamento sem entrada</li>
+            <li>Redução de juros e multas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <h3><span class="step-number">4</span> Formalize o acordo</h3>
+        <ol>
+          <li>Solicite proposta oficial</li>
+          <li>Leia as cláusulas</li>
+          <li>Evite juros embutidos</li>
+          <li>Guarde comprovantes</li>
+        </ol>
+      </div>
+
+      <div class="step-card">
+        <h3><span class="step-number">5</span> Acompanhe a regularização</h3>
+        <ul>
+          <li>Prazo: até 5 dias úteis após pagamento</li>
+          <li>Confirme a exclusão em 7 dias</li>
+          <li>Se necessário, contate o credor com comprovantes</li>
+          <li>
+            Reclame no
+            <a href="https://www.procon.sp.gov.br" target="_blank">Procon</a>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Recursos úteis</h2>
+      <div class="tip-box">
+        <div class="tip-title">Direitos do Consumidor</div>
+        <ul>
+          <li>Não ser cobrado por dívidas com mais de 5 anos</li>
+          <li>Receber quitação após pagamento</li>
+          <li>Evitar cobranças abusivas</li>
+        </ul>
+        <p>Peça revisão de juros com base no Código de Defesa do Consumidor.</p>
+      </div>
+
+      <h2>Precisa de ajuda profissional?</h2>
+      <ul>
+        <li><strong>Defensoria Pública:</strong> Gratuita</li>
+        <li>
+          <strong>Juizados Especiais:</strong> Até 40 salários mínimos sem
+          advogado
+        </li>
+        <li><strong>Reorganização Financeira:</strong> Via Justiça</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p class="mb-2"></p>
+      <p class="mb-0">Planeja.me &copy; 2025</p>
+      <p class="mb-0">
+        Planejar não é só economizar, é conquistar. Conquiste com a gente!
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

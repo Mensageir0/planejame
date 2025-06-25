@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fato ou Fake - Verifique informações</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --light: #f7f7f7;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light);
+        color: var(--primary);
+        padding-top: 60px;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #ffffff;
+        padding: 60px 0 30px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .content-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: var(--secondary);
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 5px;
+      }
+
+      .tip,
+      .fake-example,
+      .true-example {
+        padding: 10px;
+        margin: 20px 0;
+      }
+
+      .tip {
+        background-color: #dcdcdc;
+        border-left: 5px solid #a9a9a9;
+      }
+
+      .fake-example {
+        background-color: #f8e8e8;
+        border-left: 5px solid #e74c3c;
+      }
+
+      .true-example {
+        background-color: #e8f8e8;
+        border-left: 5px solid #2ecc71;
+      }
+
+      .check-button {
+        display: block;
+        width: 240px;
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        margin: 30px auto;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      .check-button:hover {
+        background-color: #2980b9;
+      }
+
+      .navbar {
+        background-color: var(--primary) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: var(--secondary) !important;
+      }
+
+      .active {
+        font-weight: bold;
+      }
+
+      footer {
+        background: var(--primary);
+        color: var(--white);
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="simulador.html">Simulador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="invest.html">Investimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aulas.html">Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="FATO OU FAKE ATT.html"
+                >Fato ou Fake</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="depoimento.html">Depoimentos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="container">
+        <h1>Fato ou Fake</h1>
+        <p>Verifique informações antes de compartilhar</p>
+      </div>
+    </div>
+
+    <div class="content-container">
+      <h2>Como identificar notícias falsas</h2>
+
+      <div class="tip">
+        <h3>Dica 1: Verifique a fonte</h3>
+        <p>
+          Confira se a informação vem de um site confiável. Desconfie de fontes
+          desconhecidas.
+        </p>
+      </div>
+
+      <div class="tip">
+        <h3>Dica 2: Pesquise em outros sites</h3>
+        <p>Veja se a notícia aparece em veículos de comunicação conhecidos.</p>
+      </div>
+
+      <div class="tip">
+        <h3>Dica 3: Cheque a data</h3>
+        <p>
+          Fake news costumam usar informações antigas como se fossem recentes.
+        </p>
+      </div>
+
+      <h2>FATO OU FAKE?</h2>
+
+      <div class="fake-example">
+        <h3>Fake</h3>
+        <p><strong>"Pix será cobrado ou taxado"</strong></p>
+        <p>
+          Por que é fake: BC e governo confirmaram que o Pix permanece gratuito
+          e sigiloso.
+        </p>
+      </div>
+
+      <div class="true-example">
+        <h3>Fato</h3>
+        <p><strong>"O cartão de crédito pode ser um aliado"</strong></p>
+        <p>
+          Por que é fato: se bem utilizado, ajuda a organizar gastos e gerar
+          benefícios.
+        </p>
+      </div>
+
+      <div class="fake-example">
+        <h3>Fake</h3>
+        <p>
+          <strong
+            >"Pix será monitorado pelo governo nos mínimos detalhes"</strong
+          >
+        </p>
+        <p>
+          Por que é fake: Apenas movimentações acima de R$ 5.000/mês são
+          reportadas à Receita.
+        </p>
+      </div>
+
+      <div class="true-example">
+        <h3>Fato</h3>
+        <p><strong>"Investir com pouco é viável"</strong></p>
+        <p>
+          Por que é fato: Tesouro Direto e outros permitem investir com valores
+          baixos.
+        </p>
+      </div>
+
+      <a
+        href="https://www.cnnbrasil.com.br/tudo-sobre/mercado-financeiro/"
+        class="check-button"
+        target="_blank"
+      >
+        Verifique notícias do mercado financeiro
+      </a>
+
+      <h2>Sites para verificação</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.creditas.com/exponencial/fake-news-sobre-financas/"
+            target="_blank"
+            >Fake news sobre finanças</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://valor.globo.com/financas/coluna/informacoes-privilegiadas-e-fake-news-no-mundo-financeiro.ghtml"
+            target="_blank"
+            >Fake news no mundo financeiro</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://exame.com/invest/minhas-financas/numero-de-transacoes-via-pix-tem-maior-queda-desde-novo-monitoramento-da-receita-e-fake-news/"
+            target="_blank"
+            >Informações sobre Pix</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://poupareinvestir.fidelidade.pt/blog/mentiras-que-contamos-a-nos-mesmos-sobre-dinheiro"
+            target="_blank"
+            >Sobre investimentos</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <p class="mb-2">
+        Planeja.me &copy; 2025 - Educação Financeira para Todos
+      </p>
+      <p class="mb-0">
+        Informações precisas para decisões financeiras inteligentes
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

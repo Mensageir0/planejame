@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador Financeiro Simplificado</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --azul-escuro: #1a3a6a;
+        --verde-principal: #2ecc71;
+        --branco: #ffffff;
+        --preto: #333333;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: var(--preto);
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+      .main-content {
+        flex: 1;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 80px;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .logo img {
+        max-width: 200px;
+        height: auto;
+      }
+      
+      h1, h2 {
+        color: var(--primary);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .form-section {
+        background-color: white;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      .form-control {
+        margin-bottom: 15px;
+      }
+      
+      .table-container {
+        overflow-x: auto;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      th {
+        background-color: var(--primary);
+        color: white;
+        font-weight: 500;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+      
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -moz-appearance: textfield;
+      }
+      
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      .btn-calculate {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto;
+        padding: 12px;
+        background-color: var(--verde-principal);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .btn-calculate:hover {
+        background-color: #27ae60;
+      }
+      
+      .result-container {
+        background-color: white;
+        border-radius: 8px;
+        padding: 25px;
+        margin-top: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        display: none;
+      }
+      
+      .result-title {
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+      
+      .saldo-final {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      
+      .positivo {
+        color: #27ae60;
+      }
+      
+      .negativo {
+        color: #e74c3c;
+      }
+      
+      .mensagem {
+        font-size: 1.1em;
+        margin-top: 15px;
+      }
+      
+      footer {
+        background-color: var(--azul-escuro);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        margin-top: auto;
+      }
+      
+      .footer-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .hero-section h1 {
+        color: white;
+        margin-bottom: 15px;
+      }
+      
+      @media (max-width: 768px) {
+        .main-content {
+          padding: 20px 15px;
+          padding-top: 70px;
+        }
+        
+        table {
+          font-size: 0.9em;
+        }
+        
+        th, td {
+          padding: 8px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: var(--azul-escuro)"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Simulador</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invest.html">Investimentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aulas.html">Aulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="depoimento.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-section">
+      <div class="container">
+        <h1>Simulador Financeiro</h1>
+        <p>Controle seus gastos e planeje seu futuro</p>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div class="logo">
+        <img src="./img/logotodo.jpeg" alt="Planeja.me Logo" class="img-fluid" />
+      </div>
+
+      <div class="form-section">
+        <h2>1. Informe sua Renda Mensal</h2>
+        <div class="d-flex justify-content-center">
+          <div style="width: 200px;">
+            <input 
+              type="number" 
+              id="renda" 
+              class="form-control text-center" 
+              placeholder="R$" 
+              step="0.01" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>2. Gastos Fixos (valores que se repetem todo mês)</h2>
+        <div class="table-container">
+          <table id="gastos-fixos">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aluguel</td>
+                <td><input type="number" id="aluguel" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Condomínio</td>
+                <td><input type="number" id="condominio" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Prestação do carro</td>
+                <td><input type="number" id="carro" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Escola/Faculdade</td>
+                <td><input type="number" id="educacao" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Plano de saúde</td>
+                <td><input type="number" id="saude" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Internet e telefone</td>
+                <td><input type="number" id="telecom" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Academia</td>
+                <td><input type="number" id="academia" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Seguro</td>
+                <td><input type="number" id="seguro" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Outros</td>
+                <td><input type="number" id="outros-fixos" step="0.01" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>3. Gastos Variáveis (valores que mudam mês a mês)</h2>
+        <div class="table-container">
+          <table id="gastos-variaveis">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Supermercado</td>
+                <td><input type="number" id="supermercado" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Lazer (cinema, restaurantes, etc.)</td>
+                <td><input type="number" id="lazer" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Roupas</td>
+                <td><input type="number" id="roupas" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Farmácia</td>
+                <td><input type="number" id="farmacia" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Combustível</td>
+                <td><input type="number" id="combustivel" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Delivery</td>
+                <td><input type="number" id="delivery" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Presentes</td>
+                <td><input type="number" id="presentes" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Manutenção da casa ou carro</td>
+                <td><input type="number" id="manutencao" step="0.01" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td>Outros</td>
+                <td><input type="number" id="outros-variaveis" step="0.01" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button onclick="calcular()" class="btn-calculate">Calcular Meu Orçamento</button>
+
+      <div id="resultado" class="result-container">
+        <h2 class="result-title">Resultado Final</h2>
+        <div class="saldo-final" id="saldo-final"></div>
+        <div class="mensagem" id="mensagem"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function calcular() {
+        const renda = parseFloat(document.getElementById("renda").value);
+        if (isNaN(renda) || renda <= 0) {
+          alert("Por favor, informe sua renda mensal corretamente!");
+          return;
+        }
+
+        const fixos = [
+          parseFloat(document.getElementById("aluguel").value) || 0,
+          parseFloat(document.getElementById("condominio").value) || 0,
+          parseFloat(document.getElementById("carro").value) || 0,
+          parseFloat(document.getElementById("educacao").value) || 0,
+          parseFloat(document.getElementById("saude").value) || 0,
+          parseFloat(document.getElementById("telecom").value) || 0,
+          parseFloat(document.getElementById("academia").value) || 0,
+          parseFloat(document.getElementById("seguro").value) || 0,
+          parseFloat(document.getElementById("outros-fixos").value) || 0,
+        ];
+        const totalFixos = fixos.reduce((a, b) => a + b, 0);
+
+        const variaveis = [
+          parseFloat(document.getElementById("supermercado").value) || 0,
+          parseFloat(document.getElementById("lazer").value) || 0,
+          parseFloat(document.getElementById("roupas").value) || 0,
+          parseFloat(document.getElementById("farmacia").value) || 0,
+          parseFloat(document.getElementById("combustivel").value) || 0,
+          parseFloat(document.getElementById("delivery").value) || 0,
+          parseFloat(document.getElementById("presentes").value) || 0,
+          parseFloat(document.getElementById("manutencao").value) || 0,
+          parseFloat(document.getElementById("outros-variaveis").value) || 0,
+        ];
+        const totalVariaveis = variaveis.reduce((a, b) => a + b, 0);
+
+        const saldo = renda - totalFixos - totalVariaveis;
+
+        document.getElementById("resultado").style.display = "block";
+        const saldoFinalElement = document.getElementById("saldo-final");
+        const mensagemElement = document.getElementById("mensagem");
+
+        saldoFinalElement.textContent = `Saldo Final: R$ ${saldo.toFixed(2)}`;
+        saldoFinalElement.className = saldo >= 0 ? "saldo-final positivo" : "saldo-final negativo";
+
+        if (saldo > 0) {
+          mensagemElement.textContent =
+            "Ótimo! Você está gastando menos do que ganha. Considere investir o excedente.";
+          mensagemElement.className = "mensagem positivo";
+        } else if (saldo < 0) {
+          mensagemElement.textContent =
+            "Atenção! Você está gastando mais do que ganha. Reveja seus gastos para evitar dívidas.";
+          mensagemElement.className = "mensagem negativo";
+        } else {
+          mensagemElement.textContent =
+            "Seu orçamento está equilibrado, mas sem sobra. Tente reduzir alguns gastos para criar uma reserva.";
+          mensagemElement.className = "mensagem";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planeja.me - Dicas de Investimentos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --primary: #1a3a6a; 
+        --secondary: #2ecc71;
+        --success: #28a745;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --branco: #ffffff;
+        --preto: #1a3a6a; 
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--dark);
+        background-color: #f4f4f9;
+        padding-top: 60px;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 2rem 0;
+      }
+
+      .investment-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .investment-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .investment-card h3 {
+        color: var(--primary); /* Azul */
+        margin-top: 0;
+      }
+
+      .risk-low {
+        border-left: 4px solid var(--success);
+      }
+
+      .risk-medium {
+        border-left: 4px solid var(--warning);
+      }
+
+      .risk-high {
+        border-left: 4px solid var(--danger);
+      }
+
+      footer {
+        background: var(--preto);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        margin-top: 3rem;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .social-links a {
+        color: var(--branco);
+        margin: 0 10px;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--secondary);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 95%;
+        }
+
+        .investment-card {
+          padding: 1rem;
+        }
+      }
+
+      .navbar {
+        background-color: var(--primary) !important;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: var(--secondary) !important;
+      }
+
+      .active {
+        font-weight: bold;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 60px 0 30px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulador.html">Simulador</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="invest.html"
+                  >Investimentos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aulas.html">Aulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="depoimento.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a
+                href="cadastro.html"
+                class="btn btn-primary"
+                style="
+                  background-color: var(--secondary);
+                  border-color: var(--secondary);
+                "
+                >Cadastre-se</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+ <div class="hero-section">
+      <h1>Principais tipos de Investimentos</h1>
+      <p></p>
+    </div>
+
+        <div class="investment-card risk-low">
+          <h3>Renda Fixa</h3>
+          <p><strong>Risco: Baixo</strong></p>
+          <p>
+            Investimentos com retornos mais previsíveis, ideais para
+            conservadores.
+          </p>
+          <p>
+            <strong>Exemplos:</strong> Tesouro Direto, CDB, LCI/LCA, Debêntures
+          </p>
+          <p>
+            <strong>Onde investir:</strong> Bancos, corretoras, Tesouro Direto
+          </p>
+        </div>
+
+        <div class="investment-card risk-medium">
+          <h3>Fundos de Investimento</h3>
+          <p><strong>Risco: Médio</strong></p>
+          <p>
+            Diversificação profissional com diferentes estratégias e ativos.
+          </p>
+          <p>
+            <strong>Exemplos:</strong> Fundos DI, Fundos Multimercado, Fundos
+            Imobiliários
+          </p>
+          <p>
+            <strong>Onde investir:</strong> Corretoras, plataformas de
+            investimento
+          </p>
+        </div>
+
+        <div class="investment-card risk-high">
+          <h3>Ações</h3>
+          <p><strong>Risco: Alto</strong></p>
+          <p>
+            Participação no capital de empresas com potencial de altos retornos.
+          </p>
+          <p><strong>Exemplos:</strong> Ações individuais, ETFs, BDRs</p>
+          <p>
+            <strong>Onde investir:</strong> Corretoras de valores (XP, Rico,
+            Clear, etc.)
+          </p>
+        </div>
+
+        <div class="investment-card risk-high">
+          <h3>Investimentos Alternativos</h3>
+          <p><strong>Risco: Alto</strong></p>
+          <p>Ativos não tradicionais com características especiais.</p>
+          <p>
+            <strong>Exemplos:</strong> Criptomoedas, Startups (equity
+            crowdfunding), Obras de arte
+          </p>
+          <p>
+            <strong>Onde investir:</strong> Plataformas especializadas, galerias
+            de arte
+          </p>
+        </div>
+      </section>
+
+      <section id="dicas">
+        <h2 style="color: var(--primary)">Dicas Importantes</h2>
+        <div class="investment-card">
+          <h3>1. Defina seus objetivos</h3>
+          <p>
+            Antes de investir, saiba para que você está investindo:
+            aposentadoria, compra de imóvel, educação, etc.
+          </p>
+        </div>
+
+        <div class="investment-card">
+          <h3>2. Conheça seu perfil de risco</h3>
+          <p>
+            Conservador, moderado ou arrojado? Isso determinará quais
+            investimentos são mais adequados para você.
+          </p>
+        </div>
+
+        <div class="investment-card">
+          <h3>3. Diversifique</h3>
+          <p>
+            Não coloque todos os ovos na mesma cesta. Distribua seus
+            investimentos entre diferentes classes de ativos.
+          </p>
+        </div>
+
+        <div class="investment-card">
+          <h3>4. Invista regularmente</h3>
+          <p>
+            Aplicar valores fixos periodicamente (como todo mês) ajuda a reduzir
+            os riscos e aproveitar as variações de mercado.
+          </p>
+        </div>
+
+        <div class="investment-card">
+          <h3>5. Fique atento aos custos</h3>
+          <p>
+            Taxas de administração, performance e corretagem podem corroer seus
+            rendimentos no longo prazo.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

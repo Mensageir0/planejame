@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planeja.me - Controle Financeiro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --azul-escuro: #1a3a6a;
+        --verde-principal: #2ecc71;
+        --branco: #ffffff;
+        --preto: #333333;
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --success: #4caf50;
+        --warning: #ff9800;
+        --danger: #f44336;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --branco: #ffffff;
+        --preto: #1a3a6a;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: var(--preto);
+      }
+
+      .main-content {
+        flex: 1;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 7rem 0 4rem 0;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .hero-section h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+      }
+
+      .btn-primary {
+        background-color: var(--verde-principal);
+        border-color: var(--verde-principal);
+        color: var(--branco);
+      }
+
+      .btn-primary:hover {
+        background-color: #27ae60;
+        border-color: #27ae60;
+      }
+
+      .btn-outline-primary {
+        border-color: var(--verde-principal);
+        color: var(--verde-principal);
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--verde-principal);
+        color: var(--branco);
+      }
+
+      .section-title {
+        color: var(--azul-escuro);
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-size: 2rem;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--verde-principal);
+      }
+
+      .feature-item {
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .feature-icon img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-icon img:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background-color: var(--azul-escuro);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .footer-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0 2rem 0;
+        }
+
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-section p {
+          font-size: 1.1rem;
+        }
+
+        .feature-icon {
+          height: 120px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .feature-item {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: var(--azul-escuro)"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quemsomo.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulador.html">Simulador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invest.html">Investimentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CREDITO ATT.html">Crédito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aulas.html">Aulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="depoimento.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="display-4 fw-bold">
+            Controle suas finanças de forma simples
+          </h1>
+          <p class="lead">
+            O Planeja.me ajuda você a organizar seu dinheiro, alcançar suas
+            metas e tomar decisões financeiras mais conscientes.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="cadastro.html" class="btn btn-primary btn-lg px-4"
+              >Comece Agora</a
+            >
+            <a href="quemsomo.html" class="btn btn-outline-light btn-lg px-4"
+              >Saiba Mais</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="recursos" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center section-title">Nossos Serviços</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./img/simualdor.jpg"
+                  alt="Simulador financeiro"
+                  class="img-fluid"
+                />
+              </div>
+              <h3>Simulador</h3>
+              <p>
+                Calcule seus gastos, planeje investimentos e simule diferentes
+                cenários financeiros para tomar as melhores decisões.
+              </p>
+              <a href="simulador.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./img/invest.jpg"
+                  alt="Investimentos"
+                  class="img-fluid"
+                />
+              </div>
+              <h3>Investimentos</h3>
+              <p>
+                Aprenda sobre diferentes tipos de investimentos e descubra quais
+                são os melhores para o seu perfil e objetivos.
+              </p>
+              <a href="invest.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img src="./img/cred.jpg" alt="Crédito" class="img-fluid" />
+              </div>
+              <h3>Crédito</h3>
+              <p>
+                Entenda como usar o crédito a seu favor, melhorar seu score e
+                conseguir as melhores condições em empréstimos.
+              </p>
+              <a href="CREDITO ATT.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./img/reg.png"
+                  alt="Regularização"
+                  class="img-fluid"
+                />
+              </div>
+              <h3>Regularize</h3>
+              <p>
+                Orientações passo a passo para sair do vermelho, negociar
+                dívidas e reconstruir sua saúde financeira.
+              </p>
+              <a href="REGULARIZE ATT.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img src="./img/au.png" alt="Aulas" class="img-fluid" />
+              </div>
+              <h3>Aulas</h3>
+              <p>
+                Cursos e materiais educativos sobre finanças pessoais, desde o
+                básico até estratégias avançadas.
+              </p>
+              <a href="aulas.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-4 feature-item">
+              <div class="feature-icon">
+                <img src="./img/ff.jpg" alt="Fato ou Fake" class="img-fluid" />
+              </div>
+              <h3>Fato ou Fake</h3>
+              <p>
+                Desvendamos os mitos e verdades sobre finanças para que você não
+                caia em armadilhas financeiras.
+              </p>
+              <a href="FATO OU FAKE ATT.html" class="btn btn-outline-primary"
+                >Saiba mais</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="cadastro"
+        class="py-5"
+        style="background-color: var(--azul-escuro); color: var(--branco)"
+      >
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold mb-4">
+            Pronto para transformar sua vida financeira?
+          </h2>
+          <p class="lead mb-5">
+            Junte-se a milhares de pessoas que já estão no controle de suas
+            finanças com o Planeja.me
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="cadastro.html" class="btn btn-light btn-lg px-4"
+              >Cadastre-se Grátis</a
+            >
+            <a href="#recursos" class="btn btn-outline-light btn-lg px-4"
+              >Conheça nossos recursos</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

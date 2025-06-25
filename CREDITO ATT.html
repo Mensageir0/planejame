@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartão de Crédito Inteligente - Planeja.me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --primary: #1a3a6a;
+        --secondary: #2ecc71;
+        --success: #4caf50;
+        --warning: #ff9800;
+        --danger: #f44336;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --branco: #ffffff;
+        --preto: #1a3a6a; 
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        background-color: rgb(255, 255, 255);
+        padding-top: 60px;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 60px 0 30px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #1a3a6a; /* Alterado para azul */
+      }
+
+      .home-btn {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border: 1px solid #2ecc71;
+        color: #1a3a6a; /* Alterado para azul */
+        border-radius: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      .home-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 15px;
+        color: var(--secondary);
+      }
+
+      h1 {
+        font-size: 4.4rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary);
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        color: #1a3a6a; /* Alterado para azul */
+        margin-top: 25px;
+      }
+
+      .card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .pros-cons {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .pros,
+      .cons {
+        flex: 1;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      footer {
+        background: var(--preto);
+        color: var(--branco);
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+      }
+
+      .footer-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .pros {
+        background-color: rgba(76, 175, 80, 0.1);
+        border-left: 4px solid var(--success);
+      }
+
+      .cons {
+        background-color: rgba(244, 67, 54, 0.1);
+        border-left: 4px solid var(--danger);
+      }
+
+      ul,
+      ol {
+        padding-left: 20px;
+        margin: 15px 0;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .tip-box {
+        background-color: rgba(255, 152, 0, 0.1);
+        border-left: 4px solid var(--warning);
+        padding: 15px;
+        border-radius: 0 8px 8px 0;
+        margin: 20px 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .comparison-table th {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .comparison-table tr:nth-child(even) {
+        background-color: rgba(74, 107, 255, 0.05);
+      }
+
+      .bank-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .bank-card {
+        flex: 1;
+        min-width: 200px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .bank-card h4 {
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .pros-cons {
+          flex-direction: column;
+        }
+
+        .bank-cards {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: #1a3a6a"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicio.html">Planeja.me</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulador.html">Simulador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invest.html">Investimentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Crédito</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="REGULARIZE ATT.html">Regularize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aulas.html">Aulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FATO OU FAKE ATT.html"
+                  >Fato ou Fake</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+              </li>
+            </ul>
+            <div>
+              <a
+                href="cadastro.html"
+                class="btn btn-primary"
+                style="background-color: #2ecc71; border-color: #2ecc71"
+                >Cadastre-se</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-section">
+      <h1>Cartão de Crédito Inteligente</h1>
+      <p>Tudo o que você precisa saber para usar seu cartão com sabedoria</p>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>O Guia Completo do Cartão de Crédito</h2>
+        <p>
+          O cartão de crédito pode ser seu maior aliado ou seu pior inimigo
+          financeiro. Tudo depende de como você o utiliza. Neste guia, vamos te
+          ensinar a dominar essa ferramenta poderosa.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Diferença entre Crédito e Débito</h2>
+
+        <table class="comparison-table">
+          <tr>
+            <th>Característica</th>
+            <th>Cartão de Crédito</th>
+            <th>Cartão de Débito</th>
+          </tr>
+          <tr>
+            <td>Funcionamento</td>
+            <td>Compra agora, paga depois (no vencimento da fatura)</td>
+            <td>Compra agora, o dinheiro sai imediatamente da conta</td>
+          </tr>
+          <tr>
+            <td>Limite</td>
+            <td>Estabelecido pelo banco com base no seu perfil</td>
+            <td>Limitado ao saldo da conta corrente</td>
+          </tr>
+          <tr>
+            <td>Juros</td>
+            <td>Altos juros se não pagar o total da fatura</td>
+            <td>Não há juros</td>
+          </tr>
+          <tr>
+            <td>Benefícios</td>
+            <td>Programas de pontos, milhas, cashback, seguros</td>
+            <td>Praticamente nenhum benefício adicional</td>
+          </tr>
+          <tr>
+            <td>Impacto no score</td>
+            <td>Uso responsável melhora muito seu score</td>
+            <td>Não afeta seu score de crédito</td>
+          </tr>
+        </table>
+
+        <div class="tip-box">
+          <h3>Quando usar cada um?</h3>
+          <p>
+            <strong>Use crédito para:</strong> Compras planejadas que você tem
+            certeza que poderá pagar, aproveitando benefícios e protegendo seu
+            dinheiro (compras online, viagens).
+          </p>
+          <p>
+            <strong>Use débito para:</strong> Compras do dia a dia e quando
+            quiser evitar qualquer risco de gastar além do planejado.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Benefícios e Riscos do Cartão de Crédito</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>✅ Benefícios</h3>
+            <ul>
+              <li>Facilidade e segurança nas compras</li>
+              <li>
+                Proteção contra fraudes (não usa seu dinheiro diretamente)
+              </li>
+              <li>Programas de recompensa (pontos, milhas, cashback)</li>
+              <li>Possibilidade de parcelamento sem juros</li>
+              <li>
+                Melhora seu histórico de crédito quando usado corretamente
+              </li>
+              <li>Seguros inclusos (em alguns cartões)</li>
+            </ul>
+          </div>
+
+          <div class="cons">
+            <h3>❌ Riscos</h3>
+            <ul>
+              <li>Juros altíssimos se não pagar a fatura completa</li>
+              <li>Facilidade de perder o controle dos gastos</li>
+              <li>Anuidades e taxas podem encarecer o uso</li>
+              <li>Pode levar a dívidas acumuladas rapidamente</li>
+              <li>Compra por impulso mais frequente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>O Que Comprar no Crédito vs Débito</h2>
+
+        <h3>🛒 Compre no crédito:</h3>
+        <ul>
+          <li>Compras grandes planejadas (eletrodomésticos, móveis)</li>
+          <li>
+            Passagens aéreas e hospedagens (proteção contra cancelamentos)
+          </li>
+          <li>Compras online (maior segurança contra fraudes)</li>
+          <li>Oportunidades com parcelamento sem juros</li>
+          <li>Onde você ganha bons benefícios (pontos, milhas)</li>
+        </ul>
+
+        <h3>💳 Prefira o débito:</h3>
+        <ul>
+          <li>Compras pequenas do dia a dia (lanches, cafés)</li>
+          <li>Quando estiver controlando orçamento apertado</li>
+          <li>Estabelecimentos que cobram taxa para crédito</li>
+          <li>Se você tem tendência a gastar além do planejado</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Melhores Bancos para Cartão de Crédito (2023)</h2>
+
+        <div class="bank-cards">
+          <div class="bank-card">
+            <h4>Nubank</h4>
+            <p>
+              Cartão sem anuidade, app intuitivo, bom para quem está começando
+            </p>
+          </div>
+
+          <div class="bank-card">
+            <h4>Inter</h4>
+            <p>Cashback, sem anuidade, bom pacote de benefícios</p>
+          </div>
+
+          <div class="bank-card">
+            <h4>Itaú</h4>
+            <p>Programa de pontos robusto, bom atendimento</p>
+          </div>
+
+          <div class="bank-card">
+            <h4>Santander</h4>
+            <p>Ótimos limites, programa de vantagens consistente</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <h3>Como escolher seu cartão ideal?</h3>
+          <ul>
+            <li>Prefira cartões sem anuidade se seu gasto é baixo</li>
+            <li>
+              Cartões com anuidade só valem a pena se os benefícios superarem o
+              custo
+            </li>
+            <li>Compare programas de recompensa com seu perfil de consumo</li>
+            <li>Comece com limites baixos e peça aumento gradualmente</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Como Melhorar Seu Score com o Cartão</h2>
+
+        <h3>📈 Dicas para aumentar seu score:</h3>
+        <ol>
+          <li>Pague SEMPRE a fatura completa e em dia</li>
+          <li>Mantenha o uso abaixo de 30% do seu limite</li>
+          <li>Não tenha muitas solicitações de crédito em curto período</li>
+          <li>Mantenha o cartão ativo, mas com uso moderado</li>
+          <li>Tenha uma conta bancária com movimentação regular</li>
+          <li>Evite parcelar muitas compras ao mesmo tempo</li>
+        </ol>
+
+        <h3>⏳ Prazos importantes:</h3>
+        <ul>
+          <li>
+            Seu score começa a melhorar significativamente após 6 meses de uso
+            responsável
+          </li>
+          <li>Histórico negativo sai após 5 anos</li>
+          <li>Consultas ao seu CPF ficam registradas por 6 meses</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Regras de Ouro do Cartão de Crédito</h2>
+
+        <h3>✅ O que fazer:</h3>
+        <ul>
+          <li>Trate o cartão como débito - só compre o que pode pagar</li>
+          <li>Acompanhe seus gastos diariamente pelo app</li>
+          <li>Negocie anuidades e taxas com seu banco</li>
+          <li>Use os benefícios (pontos, seguros, proteções)</li>
+          <li>Defina um limite pessoal abaixo do limite do cartão</li>
+        </ul>
+
+        <h3>❌ O que não fazer:</h3>
+        <ul>
+          <li>NUNCA pague apenas o mínimo da fatura</li>
+          <li>Não use o cartão para cobrir despesas básicas</li>
+          <li>Evite saques em dinheiro (juros altíssimos)</li>
+          <li>Não tenha mais cartões do que consegue controlar</li>
+          <li>Não ignore o vencimento da fatura</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <p class="mb-0">Planeja.me &copy; 2025</p>
+        <p class="mb-0">
+          Planejar não é só economizar, é conquistar. Conquiste com a gente!
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
